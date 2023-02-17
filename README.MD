@@ -2,7 +2,7 @@
 
 Tools repo for my testing and so on. 
 
-- fdata-generator.py
+- fkdata-generator.py
 
 ```bash
 sh-3.2$ python3 fdata_generator.py --file ../data/user_fake_data --records 100000 --format parquet

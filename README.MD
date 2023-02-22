@@ -2,23 +2,23 @@
 
 Tools repo for my testing and so on. 
 
-- fkdata-generator.py
+- fkdata-generator
 
 ```bash
-sh-3.2$ python3 data_fgenerator --file ../data/user_fake_data --records 100000 --format parquet
+time python3 fkdata_generator --file ../data/fkuser_data --records 10000 --format parquet
 
-Creating file ../data/user_fake_data.parquet with '100000' rows: 
+Generating Fake Data with '10000' records.... 
 
-100%|█████████████████████████████████████████████████████████████████████████████████████| 14285/14285 [00:48<00:00, 292.71it/s]
+100%|█████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:18<00:00, 551.32it/s]
 
 Sample Data:
-                       Email_Id          Name Game_Id                                    Device     Phone_Number                                                  Address            City Year     Time                           Link Money_Spent
-          Luis.Collier@lee.net  Luis Collier     493 iPhone; CPU iPhone OS 6_1_6 like Mac OS X     317-990-2633 108 Christopher Ford Suite 997\nNew Bradleyton, LA 12542 Lake Melodybury 1982 13:47:19 https://collins-patterson.org/         532
-Randy.Carson@mooney-chaney.com  Randy Carson    9265     iPad; CPU iPad OS 5_1_1 like Mac OS X 561.411.0622x459                    5290 Bradley Keys\nShawtown, AL 85423       Reyesland 2018 05:33:15      https://weiss-campos.com/         589
-      Steve.Marquez@jordan.com Steve Marquez    9589 iPhone; CPU iPhone OS 5_1_1 like Mac OS X 875-534-8545x647            58752 Johnson Ridges\nSouth Cynthia, NY 51606    New Jennifer 1990 14:28:25          https://www.holt.com/         187 
+                          Email_Id   Name    Gamer_Id                                     Device        Phone_Number                                                 Address              City Year     Time                     Link  Purchase_Amount
+Erin.Brown@montgomery-nichols.com   Erin   Brown6307  iPhone; CPU iPhone OS 9_3_5 like Mac OS X   (009)211-6735x508        48402 Kelly Port Apt. 431\nNorth Brian, PR 81662         Lucasland 2012 06:12:59   https://www.perez.com/              544
+       Dennis.King@avila-odom.com Dennis    King3027 iPhone; CPU iPhone OS 14_2_1 like Mac OS X (852)065-5680x15345 92220 Denise Ways Apt. 843\nNorth Sierrashire, WV 39014 East Timothyshire 1976 20:42:58      https://ortega.com/               97
+       Tammy.Andrews@garrison.com  Tammy Andrews8289  iPhone; CPU iPhone OS 6_1_6 like Mac OS X    001-319-013-0740      6603 Justin Prairie Apt. 652\nMorrisbury, ID 31143      Nicholeville 1987 07:41:59 http://www.anderson.org/              312 
 
 
-Created file: ../data/user_fake_data.parquet
-With 100000 rows
+Created file: ../data/fkuser_data.parquet
+With 10000 records of data
 
 ```

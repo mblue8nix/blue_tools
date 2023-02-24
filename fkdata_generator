@@ -31,7 +31,7 @@ else:
 # *TODO: Better handling   
 if args.format_name is None:
     print("Needs 'csv, json or parquet' format argument:\n\
-    Usage is: python3 fjdata_generator --file mytestdata --records 1000 --format parquet")
+    Usage is: python3 fkdata_generator --file mytestdata --records 1000 --format parquet")
     sys.exit()
 
 if args.format_name:

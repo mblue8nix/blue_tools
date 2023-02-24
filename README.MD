@@ -1,11 +1,14 @@
 # blue tools 
 
-Tools repo for my testing and so on. 
+Tools I created to work on a mac/linux systems that will help in productivity, testing and so on. 
+
+Fake data generator: 
+(Generate fake data as files in `json, csv or parquet` format)
 
 - fkdata-generator
 
 ```bash
-time python3 fkdata_generator --file ../data/fkuser_data --records 10000 --format parquet
+python3 fkdata_generator --file ../data/fkuser_data --records 10000 --format parquet
 
 Generating Fake Data with '10000' records.... 
 
@@ -22,3 +25,17 @@ Created file: ../data/fkuser_data.parquet
 With 10000 records of data
 
 ```
+
+------------
+
+Pom Clock: 
+(Simple Pomodore Clock for time managment.)
+
+- pom-clock 
+
+Usage:
+```
+pom-clock
+```
+
+

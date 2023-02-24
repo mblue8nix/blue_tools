@@ -1,0 +1,79 @@
+#! /usr/local/bin/python3
+import tkinter as tk
+from tkinter import ttk
+import tkinter.messagebox
+import time
+import webbrowser
+
+#Create the window
+window = tk.Tk()
+window.title("Pomodoro Clock")
+
+#How many minutes
+TIME_VALUE = 25
+
+#Display the time
+def display_time():
+    current_time = time.strftime("%I:%M:%S %p")
+    clock_label.configure(text = current_time)
+    clock_label.after(1000,display_time)
+
+#Create clock label
+clock_label = ttk.Label(window, foreground='#00BFFF', text = "", font = ('times',20,'bold'))
+clock_label.grid(row = 0, column = 0, ipady = 10)
+
+#Start the clock
+display_time()
+
+#Create timer label
+timer_label = ttk.Label(window, foreground='#FF817A', text = "00:00:00", font = ('times',40,'bold'))
+timer_label.grid(row = 0, column = 1, ipady = 10)
+
+#Create start button
+start_button = ttk.Button(window, text = "Start", width = 10)
+start_button.grid(row = 1, column = 0, ipady = 10)
+
+#Create reset button
+reset_button = ttk.Button(window, text = "Reset", width = 10)
+reset_button.grid(row = 1, column = 1, ipady = 10)
+
+#Fuction for pop once timer is done
+def take_break():
+#    tkinter.messagebox.showinfo('Pomodoro Timer', 'Take a break Mike!', font=('times',60,'bold'), forground='#FF817A')
+# testing
+    webbrowser.open("https://bluetifuldata.ghost.io")
+#Create the function for the start button
+def start_timer():
+    global running
+    if not running:
+        running = True
+        current_time = time.time()
+        end_time = current_time + ( TIME_VALUE * 60)
+        while running:
+            time_left = end_time - time.time()
+            m, s = divmod(time_left,60)
+            h, m = divmod(m,60)
+            time_format = "{:0>2}:{:0>2}:{:0>2}".format(int(h),int(m),int(s))
+            timer_label.configure(text = time_format)
+            window.update()
+            if time_left < 0:
+                take_break()
+                running = False
+                reset_timer()
+            else:
+                window.after(1000,start_timer)
+
+#Create the function for the reset button
+def reset_timer():
+    global running
+    running = False
+    timer_label.configure(text = "00:00:00")
+
+#Bind the start and reset buttons
+start_button.configure(command = start_timer)
+reset_button.configure(command = reset_timer)
+
+running = False
+
+#Start the main loop
+window.mainloop()

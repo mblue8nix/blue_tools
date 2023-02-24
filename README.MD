@@ -3,6 +3,8 @@
 Tools I created to work on a mac/linux systems that will help in productivity, testing and so on. 
 
 Fake data generator: 
+
+## fkdata-generator
 (Generate fake data as files in `json, csv or parquet` format)
 
 - fkdata-generator
@@ -28,8 +30,12 @@ With 10000 records of data
 
 ------------
 
+## Pomodre Clock 
 Pom Clock: 
-(Simple Pomodore Clock for time managment.)
+(Simple Pomodoro Clock for time managment.)
+
+After 25 minutes on a task a website will pop for a break. 
+You can change the site url by changing the `BREAK_SITE` var. 
 
 - pom-clock 
 

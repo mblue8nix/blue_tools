@@ -12,6 +12,9 @@ window.title("Pomodoro Clock")
 #How many minutes
 TIME_VALUE = 25
 
+#Pop up Website to visit after time is up
+BREAK_SITE = "https://bluetifuldata.ghost.io"
+
 #Display the time
 def display_time():
     current_time = time.strftime("%I:%M:%S %p")
@@ -41,7 +44,7 @@ reset_button.grid(row = 1, column = 1, ipady = 10)
 def take_break():
 #    tkinter.messagebox.showinfo('Pomodoro Timer', 'Take a break Mike!', font=('times',60,'bold'), forground='#FF817A')
 # testing
-    webbrowser.open("https://bluetifuldata.ghost.io")
+    webbrowser.open(BREAK_SITE)
 #Create the function for the start button
 def start_timer():
     global running

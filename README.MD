@@ -30,7 +30,7 @@ With 10000 records of data
 
 ------------
 
-## Pomodre Clock 
+## Pomodoro Clock 
 Pom Clock: 
 (Simple Pomodoro Clock for time managment.)
 
